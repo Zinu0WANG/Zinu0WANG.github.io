@@ -225,6 +225,39 @@ header.scrolled .nav-container {
   background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo));
 }
 
+.lang-switch-item {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition-smooth);
+}
+
+.lang-btn i {
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+  background: rgba(0, 242, 254, 0.08);
+  border-color: rgba(0, 242, 254, 0.25);
+  color: var(--text-primary);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.15);
+}
+
 /* Mobile Menu Toggle */
 .mobile-toggle {
   display: none;

@@ -1,13 +1,89 @@
 // JavaScript for Personal Portfolio Website
 
+let currentLang = 'en';
+let terminalTimeoutId = null;
+
 document.addEventListener('DOMContentLoaded', () => {
+  initLanguage();
   initNavbar();
   initMobileMenu();
   initSectionSpy();
   initTerminalSimulation();
 });
 
-// 1. Navbar Scroll Effect
+// 1. Language Localization & State Handling
+function initLanguage() {
+  // Read preference from localStorage or fall back to browser preferred language
+  let savedLang = localStorage.getItem('preferredLang');
+  if (!savedLang) {
+    const userLang = navigator.language || navigator.userLanguage;
+    savedLang = (userLang && userLang.toLowerCase().startsWith('zh')) ? 'zh' : 'en';
+  }
+  currentLang = savedLang;
+  applyTranslations(currentLang);
+
+  // Setup click handler for toggle button
+  const langToggle = document.getElementById('lang-toggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'zh' : 'en';
+      localStorage.setItem('preferredLang', currentLang);
+      applyTranslations(currentLang);
+      
+      // Clean restart the terminal simulation using translated steps
+      initTerminalSimulation();
+    });
+  }
+
+  // Setup contact form submission alert translation
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert(translations[currentLang]['contact.alert_success']);
+    });
+  }
+}
+
+function applyTranslations(lang) {
+  // Update document language attribute
+  document.documentElement.lang = lang;
+
+  // Update SEO Document Title and Description
+  if (translations[lang]["meta.title"]) {
+    document.title = translations[lang]["meta.title"];
+  }
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && translations[lang]["meta.description"]) {
+    metaDesc.setAttribute('content', translations[lang]["meta.description"]);
+  }
+
+  // Translate all elements with data-i18n markers
+  const i18nElements = document.querySelectorAll('[data-i18n]');
+  i18nElements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key] !== undefined) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // Translate elements with placeholders (such as form inputs)
+  const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+  placeholderElements.forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang] && translations[lang][key] !== undefined) {
+      el.setAttribute('placeholder', translations[lang][key]);
+    }
+  });
+
+  // Toggle button indicator text (if current is EN, show button to switch to ZH, and vice versa)
+  const langText = document.getElementById('lang-text');
+  if (langText) {
+    langText.textContent = lang === 'en' ? 'ZH' : 'EN';
+  }
+}
+
+// 2. Navbar Scroll Effect
 function initNavbar() {
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
@@ -19,7 +95,7 @@ function initNavbar() {
   });
 }
 
-// 2. Mobile Menu Toggle
+// 3. Mobile Menu Toggle
 function initMobileMenu() {
   const toggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');
@@ -44,7 +120,7 @@ function initMobileMenu() {
   });
 }
 
-// 3. Section Spy (Highlight Active Nav Link on Scroll)
+// 4. Section Spy (Highlight Active Nav Link on Scroll)
 function initSectionSpy() {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -74,37 +150,35 @@ function initSectionSpy() {
   });
 }
 
-// 4. Terminal Simulation (Typing and Agent Execution Output)
+// 5. Terminal Simulation (Typing and Agent Execution Output)
 function initTerminalSimulation() {
   const terminal = document.getElementById('terminal-body');
   if (!terminal) return;
 
-  const simulationSteps = [
-    { type: 'cmd', text: 'python run_agent.py --orchestrate' },
-    { type: 'system', text: '[System] Initializing Multi-Agent Orchestration Engine...' },
-    { type: 'mcp', text: '[MCP] Fetching server schemas (SQLite, Filesystem, Web Search)...' },
-    { type: 'success', text: '[Success] Registered 3 MCP tools with Agent reasoning core.' },
-    { type: 'input', text: 'User: "Optimize context precision in RAG database."' },
-    { type: 'thought', text: '[Agent Thought] Analyzing request. Action needed: Retrieve documents via Parent-Document Retrieval.' },
-    { type: 'tool', text: '[MCP Call] -> doc_retriever.search(strategy="parent-document", query="context precision")' },
-    { type: 'tool-response', text: '[MCP Response] <- Returning parent chunks (doc_id_817, doc_id_944). Accuracy metrics high.' },
-    { type: 'thought', text: '[Agent Thought] Processing parent contexts. Filtering noise and redundant strings.' },
-    { type: 'success', text: '[Agent Response] Context optimized. Precision improved by +34%. Hallucination metrics decreased.' },
-    { type: 'cmd', text: 'git commit -m "feat: standardise agent loops using MCP"' },
-    { type: 'success', text: '[git] 4 files changed, 114 insertions(+), 12 deletions(-)' }
-  ];
+  // Clear any existing active timeout to avoid overlapping step execution
+  if (terminalTimeoutId) {
+    clearTimeout(terminalTimeoutId);
+  }
+
+  // Clear terminal body and render initial blinking prompt
+  terminal.innerHTML = '';
+  
+  const initialCursor = document.createElement('div');
+  initialCursor.className = 'terminal-line terminal-line-cursor';
+  initialCursor.innerHTML = '<span class="prefix">sys@agent:~#</span> <span class="cursor-blink">█</span>';
+  terminal.appendChild(initialCursor);
 
   let currentStep = 0;
+  const simulationSteps = translations[currentLang]["terminal.steps"] || [];
 
   function runNextStep() {
     if (currentStep >= simulationSteps.length) {
       // Clear terminal (except for header) and restart simulation after a short delay
-      setTimeout(() => {
+      terminalTimeoutId = setTimeout(() => {
         terminal.innerHTML = '';
         currentStep = 0;
-        // Append baseline prompt
-        appendTerminalLine('sys@agent:~#', 'python run_agent.py --orchestrate', 'cmd');
-        setTimeout(runNextStep, 1000);
+        appendTerminalLine('sys@agent:~#', translations[currentLang]["hero.terminal_cmd"] || 'python run_agent.py --orchestrate', 'cmd');
+        terminalTimeoutId = setTimeout(runNextStep, 1000);
       }, 5000);
       return;
     }
@@ -150,7 +224,7 @@ function initTerminalSimulation() {
     if (step.type === 'cmd') nextDelay = 2000;
     if (step.type === 'thought') nextDelay = 2500;
     
-    setTimeout(runNextStep, nextDelay);
+    terminalTimeoutId = setTimeout(runNextStep, nextDelay);
   }
 
   function appendTerminalLine(prefixText, contentText, contentClass) {
@@ -183,5 +257,5 @@ function initTerminalSimulation() {
   }
 
   // Start the simulation loop after initial page render
-  setTimeout(runNextStep, 2000);
+  terminalTimeoutId = setTimeout(runNextStep, 2000);
 }
