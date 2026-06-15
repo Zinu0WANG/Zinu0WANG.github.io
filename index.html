@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WANG ZINUO (王梓诺) | AI Systems Engineer & Researcher</title>
+  <meta name="description" content="Official portfolio of WANG ZINUO (王梓诺), an AI Systems Engineer & Researcher focusing on Multi-Agent Orchestration, Parent-Document Retrieval RAG strategies, and Model Context Protocol (MCP).">
+  <meta name="keywords" content="WANG ZINUO, 王梓诺, AI Systems Engineer, AI Researcher, CUHK AI, Dartmouth, Multi-Agent, RAG, MCP">
+  <meta name="author" content="WANG ZINUO">
+  
+  <!-- Open Graph Metadata (for social sharing previews) -->
+  <meta property="og:title" content="WANG ZINUO | AI Systems Engineer & Researcher">
+  <meta property="og:description" content="Official portfolio of WANG ZINUO, showcasing research in Multi-Agent orchestrations and advanced RAG architectures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zinuowang.github.io">
+  
+  <!-- JSON-LD Structured Data for Google (Person Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "WANG ZINUO",
+    "alternateName": "王梓诺",
+    "jobTitle": "AI Systems Engineer & Researcher",
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "The Chinese University of Hong Kong",
+        "sameAs": "https://www.cuhk.edu.hk"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Dartmouth College",
+        "sameAs": "https://home.dartmouth.edu"
+      }
+    ],
+    "url": "https://zinuowang.github.io",
+    "sameAs": [
+      "https://github.com/Zinu0WANG",
+      "https://www.linkedin.com/in/zinuo-wang-96843b318"
+    ]
+  }
+  </script>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span>&lt;</span>AI_Sys<span>.Eng&gt;</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-intro">Active Agent Loop</div>
+        <h1>Hi, I'm <span class="gradient-text hero-name">WANG ZINUO</span></h1>
+        <h2>AI Systems Engineer &amp; Researcher</h2>
+        <p class="subtitle">
+          Designing production-ready Multi-Agent systems, robust ReAct frameworks, and high-performance RAG architectures with standardized tool interfaces.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            Explore Work <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-terminal">
+        <div class="terminal-widget">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+            </div>
+            <div class="terminal-title">agent_runtime.py</div>
+            <div><i class="fa-solid fa-circle-play success"></i></div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <!-- Simulated agent output will be injected here via javascript -->
+            <div class="terminal-line">
+              <span class="prefix">sys@agent:~#</span>
+              <span class="cmd">python run_agent.py --orchestrate</span>
+            </div>
+            <div class="terminal-line">
+              <span class="output">[System] Loading multi-agent orchestration engine...</span>
+            </div>
+            <div class="terminal-line">
+              <span class="output">[MCP] Establishing secure tool context protocol channels...</span>
+            </div>
+            <div class="terminal-line">
+              <span class="success">[Success] Agent loop initialized. Listening...</span>
+            </div>
+            <div class="terminal-line">
+              <span class="prefix">sys@agent:~#</span>
+              <span class="cursor-blink">█</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>A synergistic approach bridging technical frontend implementation with low-level AI systems engineering and academic research.</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-info">
+          <h3>Core Philosophy</h3>
+          <p class="about-text">
+            I specialize in developing production-ready autonomous programming agents, standardized agent interfaces via Model Context Protocol (MCP), and enterprise data ingestion layers. My goal is to build intelligent systems that move beyond chat inputs, delivering deterministic action-taking capability and highly-optimized context retrieval.
+          </p>
+          
+          <h3>Education &amp; Background</h3>
+          <div class="edu-card">
+            <div class="edu-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-details">
+              <span class="school">The Chinese University of Hong Kong (CUHK)</span>
+              <h4>B.Eng. in Artificial Intelligence: Systems and Technologies</h4>
+              <p class="meta">Developing robust machine learning systems, autonomous algorithms, and custom hardware/software infrastructure.</p>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+            <div class="edu-details">
+              <span class="school">Dartmouth College, USA</span>
+              <h4>Global Student Exchange Program</h4>
+              <p class="meta">Jan 2026 – Mar 2026 | Focused on advanced distributed computing systems, global networking, and collaborative artificial intelligence research.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="ide-widget">
+            <div class="ide-header">
+              <div class="ide-tabs">
+                <span class="ide-tab active"><i class="fa-brands fa-python text-blue"></i> engineer.py</span>
+              </div>
+              <span class="terminal-title">UTF-8</span>
+            </div>
+            <div class="ide-body">
+              <pre class="ide-code"><code><span class="keyword">class</span> <span class="class">AIEngineer</span>:
+    <span class="keyword">def</span> <span class="self">__init__</span>(<span class="self">self</span>):
+        <span class="self">self</span>.name = <span class="string">"Zinuo Wang"</span>
+        <span class="self">self</span>.education = <span class="string">"CUHK B.Eng. (AI Systems & Tech)"</span>
+        <span class="self">self</span>.global_exchange = <span class="string">"Dartmouth College (2026)"</span>
+        <span class="self">self</span>.languages = [<span class="string">"Mandarin (Native)"</span>, <span class="string">"English (Professional)"</span>]
+        
+    <span class="keyword">def</span> <span class="class">get_core_focus</span>(<span class="self">self</span>):
+        <span class="keyword">return</span> {
+            <span class="string">"architecture"</span>: <span class="string">"Multi-Agent Orchestration"</span>,
+            <span class="string">"reasoning"</span>: <span class="string">"ReAct Loop Execution"</span>,
+            <span class="string">"protocols"</span>: <span class="string">"Model Context Protocol (MCP)"</span>,
+            <span class="string">"retrieval"</span>: <span class="string">"Parent-Document Retrieval RAG"</span>
+        }
+
+    <span class="keyword">def</span> <span class="class">philosophy</span>(<span class="self">self</span>):
+        <span class="comment"># Designing agents with robust boundary lines,</span>
+        <span class="comment"># standardized context, and predictable outcomes.</span>
+        <span class="keyword">pass</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="container">
+    <div class="section-header">
+      <h2>Professional Timeline</h2>
+      <p>My journey through enterprise AI engineering and cutting-edge software research environments.</p>
+    </div>
+    
+    <div class="timeline">
+      <!-- TadReamk Limited -->
+      <div class="timeline-item incoming">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header-info">
+            <div class="timeline-title">
+              <h3>Incoming AI Engineering &amp; Data Curation Intern</h3>
+              <span class="timeline-company">TadReamk Limited</span>
+            </div>
+            <span class="timeline-date">Starting June 8, 2026</span>
+          </div>
+          <ul class="timeline-body-list">
+            <li>Scheduled to begin enterprise-grade AI architecture implementation and data pipeline optimization.</li>
+            <li>Focusing on high-volume data curation strategies to fine-tune and optimize reasoning capabilities of autonomous agents.</li>
+            <li>Collaborating with cross-functional engineering units to test, scale, and manage automated workflow agents.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Neoway Technology -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header-info">
+            <div class="timeline-title">
+              <h3>AI Agent Research and Development Intern</h3>
+              <span class="timeline-company">Neoway Technology, Shenzhen</span>
+            </div>
+            <span class="timeline-date">June 2025 – August 2025</span>
+          </div>
+          <ul class="timeline-body-list">
+            <li>Researched and built enterprise-level AI agent workflows, leveraging custom LLM pipelines to automate legacy operational flows.</li>
+            <li>Designed robust multi-agent orchestration wrappers to handle task division, feedback mechanisms, and error recovery.</li>
+            <li>Assisted in building custom connectors bridging core language models to internal APIs and databases.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>A selection of systems engineering and research projects, bridging theoretical agent loops with real-world application.</p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1: FYP -->
+        <div class="glass-card project-card">
+          <div class="project-header-info">
+            <div class="project-icon">
+              <i class="fa-solid fa-file-signature"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Zinu0WANG" target="_blank" rel="noopener noreferrer" aria-label="Project Repository"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AI-Assisted Research Proposal Writing Support Tool</h3>
+          <p class="project-desc">
+            An advanced tool leveraging LLMs to assist academic researchers in structuring, drafting, and refining high-quality research proposals. Designed custom UI elements to visualize proposal structure and dynamic prompt templates for targeted iteration.
+          </p>
+          <div class="project-meta">
+            <i class="fa-solid fa-user-tie"></i> Supervised by: Professor Irwin King (CUHK)
+          </div>
+          <div class="project-meta">
+            <i class="fa-solid fa-calendar-days"></i> April 2026 – Present
+          </div>
+          <div class="project-tags">
+            <span>LLM Drafting</span>
+            <span>Academic Writing</span>
+            <span>Semantic Structuring</span>
+            <span>CUHK</span>
+          </div>
+        </div>
+
+        <!-- Project 2: ACAH -->
+        <div class="glass-card project-card">
+          <div class="project-header-info">
+            <div class="project-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Zinu0WANG" target="_blank" rel="noopener noreferrer" aria-label="Project Repository"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">ACAH Autonomous Programming Agent Platform</h3>
+          <p class="project-desc">
+            Developed a comprehensive autonomous agent framework capable of executing complex multi-step programming tasks. Relies on stateful execution blocks, automated syntax checking, and dynamic planning loops to solve coding tasks without human intervention.
+          </p>
+          <div class="project-meta">
+            <i class="fa-solid fa-circle-nodes"></i> Architecture: Autonomous ReAct Loops
+          </div>
+          <div class="project-meta">
+            <i class="fa-solid fa-calendar-days"></i> January 2026 – March 2026
+          </div>
+          <div class="project-tags">
+            <span>ReAct Loop</span>
+            <span>Self-Correction</span>
+            <span>Tool Execution</span>
+            <span>Dartmouth Exchange</span>
+          </div>
+        </div>
+
+        <!-- Project 3: RAG -->
+        <div class="glass-card project-card">
+          <div class="project-header-info">
+            <div class="project-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Zinu0WANG" target="_blank" rel="noopener noreferrer" aria-label="Project Repository"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Enterprise RAG Knowledge Management Platform</h3>
+          <p class="project-desc">
+            Implemented a high-precision, low-hallucination document retrieval engine. Leveraged Parent-Document Retrieval strategies to split large files into small chunks for vector search, while returning the broader parent context to the LLM for generation.
+          </p>
+          <div class="project-meta">
+            <i class="fa-solid fa-gears"></i> Core Tech: Parent-Document Retrieval
+          </div>
+          <div class="project-meta">
+            <i class="fa-solid fa-calendar-days"></i> September 2025 – December 2025
+          </div>
+          <div class="project-tags">
+            <span>Advanced RAG</span>
+            <span>Vector Search</span>
+            <span>Parent-Doc Retrieval</span>
+            <span>Data Ingestion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container">
+    <div class="section-header">
+      <h2>Technical Core</h2>
+      <p>Categorized focus areas highlighting hands-on expertise in building resilient artificial intelligence infrastructure.</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Category 1: AI & Agents -->
+      <div class="glass-card skill-category">
+        <h3><i class="fa-solid fa-brain"></i> AI &amp; Agents</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-name">Multi-Agent Orchestration</div>
+            <p class="skill-desc">Designing consensus and conflict-resolution paradigms among multiple specialized agent roles.</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">ReAct Frameworks</div>
+            <p class="skill-desc">Implementing Reasoning-Action cycles to prompt LLMs for structured thinking before executing tool calls.</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Autonomous Programming Agents</div>
+            <p class="skill-desc">Building automated code writing, execution, testing, and debugging software loops.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Data & Knowledge -->
+      <div class="glass-card skill-category">
+        <h3><i class="fa-solid fa-layer-group"></i> Data &amp; Knowledge</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-name">Retrieval-Augmented Generation</div>
+            <p class="skill-desc">Optimizing document embedding pipelines, dynamic chunking, and semantic vector similarity search.</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Parent-Document Retrieval</div>
+            <p class="skill-desc">Extracting granular sub-chunks for accurate lookup while returning full parent contexts to LLMs.</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Data Curation</div>
+            <p class="skill-desc">Filtering, structuring, and labeling high-quality datasets to optimize LLM performance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Protocols & Tooling -->
+      <div class="glass-card skill-category">
+        <h3><i class="fa-solid fa-terminal"></i> Protocols &amp; Tooling</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-name">Model Context Protocol (MCP)</div>
+            <p class="skill-desc">Standardizing secure, bidirectional interfaces for connecting LLMs to local/remote files, tools, and databases.</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Python Agent Development</div>
+            <p class="skill-desc">Developing agent backends using standard asynchronous frameworks, decorator libraries, and SDKs.</p>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">Languages</div>
+            <p class="skill-desc">Native Mandarin (collaboration & technical documentation), Professional English (academic research & writing).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div>
+          <h3>Let's Collaborate</h3>
+          <p>Interested in robust AI orchestrations, advanced semantic search systems, or custom tool connectors? Drop a line to start a conversation.</p>
+        </div>
+        
+        <div class="contact-details">
+          <a href="mailto:1155211120@link.cuhk.edu.hk" class="contact-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>1155211120@link.cuhk.edu.hk</span>
+          </a>
+          <a href="https://github.com/Zinu0WANG" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <i class="fa-brands fa-github"></i>
+            <span>github.com/Zinu0WANG</span>
+          </a>
+          <a href="https://www.linkedin.com/in/zinuo-wang-96843b318" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>linkedin.com/in/zinuo-wang-96843b318</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="glass-card">
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent!');">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="WANG ZINUO">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required placeholder="colleague@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Hi, let's talk about Model Context Protocol integration..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="border: none; width: 100%;">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <span>&lt;</span>AI_Sys<span>.Eng&gt;</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Zinuo Wang. All rights reserved. CUHK & Dartmouth Exchange alumnus.</p>
+    </div>
+  </footer>
+
+  <!-- JS Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
