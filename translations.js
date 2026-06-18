@@ -1,7 +1,7 @@
 const translations = {
   en: {
-    "meta.title": "WANG ZINUO (王子诺) | AI Systems Engineer & Researcher",
-    "meta.description": "Official portfolio of WANG ZINUO (王子诺), an AI Systems Engineer & Researcher focusing on Multi-Agent Orchestration, Parent-Document Retrieval RAG strategies, and Model Context Protocol (MCP).",
+    "meta.title": "WANG Zinuo | AI Systems Engineer & Researcher",
+    "meta.description": "Official portfolio of WANG Zinuo, an AI Systems Engineer & Researcher focusing on Multi-Agent Orchestration, Parent-Document Retrieval RAG strategies, and Model Context Protocol (MCP).",
     
     "nav.home": "Home",
     "nav.about": "About",
@@ -12,7 +12,7 @@ const translations = {
     
     "hero.badge": "Active Agent Loop",
     "hero.title": "Hi, I'm ",
-    "hero.name": "WANG ZINUO",
+    "hero.name": "WANG Zinuo",
     "hero.subtitle": "AI Systems Engineer & Researcher",
     "hero.desc": "Designing production-ready Multi-Agent systems, robust ReAct frameworks, and high-performance RAG architectures with standardized tool interfaces.",
     "hero.explore": "Explore Work",
@@ -36,7 +36,7 @@ const translations = {
     "about.degree2": "Global Student Exchange Program",
     "about.desc2": "Jan 2026 – Mar 2026 | Focused on advanced distributed computing systems, global networking, and collaborative artificial intelligence research.",
     
-    "about.ide_name": "\"Zinuo Wang\"",
+    "about.ide_name": "\"WANG Zinuo\"",
     "about.ide_edu": "\"CUHK B.Eng. (AI Systems & Tech)\"",
     "about.ide_exchange": "\"Dartmouth College (2026)\"",
     "about.ide_lang1": "\"Mandarin (Native)\"",
@@ -117,7 +117,7 @@ const translations = {
     "contact.title": "Let's Collaborate",
     "contact.subtitle": "Interested in robust AI orchestrations, advanced semantic search systems, or custom tool connectors? Drop a line to start a conversation.",
     "contact.label_name": "Name",
-    "contact.placeholder_name": "WANG ZINUO",
+    "contact.placeholder_name": "WANG Zinuo",
     "contact.label_email": "Email Address",
     "contact.placeholder_email": "colleague@domain.com",
     "contact.label_message": "Message",
@@ -126,7 +126,7 @@ const translations = {
     "contact.alert_success": "Message sent!",
 
     "footer.logo": "AI_Sys",
-    "footer.copy": "© 2026 Zinuo Wang. All rights reserved. CUHK & Dartmouth Exchange alumnus.",
+    "footer.copy": "© 2026 WANG Zinuo. All rights reserved. CUHK & Dartmouth Exchange alumnus.",
 
     "terminal.steps": [
       { type: 'cmd', text: 'python run_agent.py --orchestrate' },
@@ -144,8 +144,8 @@ const translations = {
     ]
   },
   zh: {
-    "meta.title": "王子诺 (WANG ZINUO) | AI 系统工程师 & 研究员",
-    "meta.description": "王子诺的官方个人网站。专注于多智能体编排（Multi-Agent Orchestration）、父文档检索（Parent-Document Retrieval）RAG 策略以及模型上下文协议（MCP）的 AI 系统工程师与研究员。",
+    "meta.title": "WANG Zinuo | AI 系统工程师 & 研究员",
+    "meta.description": "WANG Zinuo的官方个人网站。专注于多智能体编排（Multi-Agent Orchestration）、父文档检索（Parent-Document Retrieval）RAG 策略以及模型上下文协议（MCP）的 AI 系统工程师与研究员。",
 
     "nav.home": "首页",
     "nav.about": "关于",
@@ -156,7 +156,7 @@ const translations = {
 
     "hero.badge": "运行中的 Agent 循环",
     "hero.title": "你好，我是 ",
-    "hero.name": "王子诺",
+    "hero.name": "WANG Zinuo",
     "hero.subtitle": "AI 系统工程师 & 研究员",
     "hero.desc": "设计生产级多智能体（Multi-Agent）系统、稳健的 ReAct 框架，以及具备标准化工具接口的高性能 RAG 架构。",
     "hero.explore": "探索我的工作",
@@ -180,7 +180,7 @@ const translations = {
     "about.degree2": "全球学生交换项目",
     "about.desc2": "2026年1月 – 2026年3月 | 专注于先进的分布式计算系统、全球网络以及协同人工智能研究。",
 
-    "about.ide_name": "\"王子诺\"",
+    "about.ide_name": "\"WANG Zinuo\"",
     "about.ide_edu": "\"香港中文大学 工学学士 (人工智能系统与技术)\"",
     "about.ide_exchange": "\"达特茅斯学院 (2026)\"",
     "about.ide_lang1": "\"中文 (母语)\"",
@@ -261,7 +261,7 @@ const translations = {
     "contact.title": "让我们开始合作",
     "contact.subtitle": "对稳健的 AI 编排、先进的语义搜索系统或定制的工具连接器感兴趣？请随时联系，开启我们的交流。",
     "contact.label_name": "姓名",
-    "contact.placeholder_name": "王子诺",
+    "contact.placeholder_name": "WANG Zinuo",
     "contact.label_email": "电子邮箱",
     "contact.placeholder_email": "colleague@domain.com",
     "contact.label_message": "留言",
@@ -270,7 +270,7 @@ const translations = {
     "contact.alert_success": "消息已发送！",
 
     "footer.logo": "AI_Sys",
-    "footer.copy": "© 2026 王子诺。保留所有权利。香港中文大学 & 达特茅斯学院交换项目校友。",
+    "footer.copy": "© 2026 WANG Zinuo。保留所有权利。香港中文大学 & 达特茅斯学院交换项目校友。",
 
     "terminal.steps": [
       { type: 'cmd', text: 'python run_agent.py --orchestrate' },

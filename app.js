@@ -13,11 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 1. Language Localization & State Handling
 function initLanguage() {
-  // Read preference from localStorage or fall back to browser preferred language
+  // Read preference from localStorage or fall back to English by default
   let savedLang = localStorage.getItem('preferredLang');
   if (!savedLang) {
-    const userLang = navigator.language || navigator.userLanguage;
-    savedLang = (userLang && userLang.toLowerCase().startsWith('zh')) ? 'zh' : 'en';
+    savedLang = 'en';
   }
   currentLang = savedLang;
   applyTranslations(currentLang);
